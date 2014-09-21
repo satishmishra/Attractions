@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> Attractoins</title>
+    <script src="src/lib/jquery-min.js"></script>
+    <script src="src/lib/underscore.js"></script>
+    <script src="src/lib/backbone.js"></script>
+    <script src="src/views/attractions.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+  <body>
+      <div id="loading"></div>
+      <table id = "tourism-table" style="width:100%">
+      </table>
+
+  </body>
+  <script type="text/template" id="tourism-city-template">
+      <% for (var i = 0; i < (data.bindings.length); i++) { %>
+          <tr>
+            <td><%= data.bindings[i].City.value.replace('Visitor attractions in ','') %></td>
+            <td><%=data.bindings[i].Attractions.value%></td>
+            </tr>
+          </tr>
+      <% } %>
+  </script>
+
+<script>
+  $(document).ready(function() {
+      var attractions;
+      return attractions = new Attractions();
+  });
+</script>
+</html>

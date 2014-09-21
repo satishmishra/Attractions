@@ -1,0 +1,24 @@
+body {
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Comic Sans MS', Helvetica, sans-serif;
+}
+
+table {
+  margin-left:auto; 
+  margin-right:auto; 
+  width: 300px; 
+  -webkit-user-select: none; 
+}
+td {
+  height: 75px;
+  width: 75px;
+  text-align: center;
+  font-size: 30px;
+  border: 2px solid #cccccc;
+  -webkit-border-radius: 10px;
+}
+
+body.loading{
+  background: url('../img/spin-fff.gif') no-repeat center center
+}
